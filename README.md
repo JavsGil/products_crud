@@ -1,73 +1,71 @@
-# API RESTful de Productos con Laravel
+# RESTful API for Products with Laravel
 
-Este proyecto implementa una API RESTful para gestionar productos utilizando Laravel 10, siguiendo principios SOLID y documentado con Swagger.
+This project implements a RESTful API to manage products using Laravel 10, following SOLID principles and documented with Swagger.
 
-## 🚀 Instalación
+## 🚀 Installation.
 
-1. Clonar el repositorio:
+1. Clone the repository:
    ```sh
    git clone https://github.com/tu-repositorio/api-productos.git
-   cd api-productos
+   cd api-products
    ```
-2. Instalar dependencias:
-   ```sh
+2. Install dependencies:
+   ````sh
    composer install
    ```
-3. Configurar variables de entorno:
-   ```sh
+3. Set environment variables:
+   ````sh
    cp .env.example .env
    ```
-4. Levantar la base de datos con Docker:
-   ```sh
+4. Raise the database with Docker:
+   ````sh
    docker-compose up -d
    ```
-5. Generar la clave de la aplicación:
-   ```sh
+5. Generate the application key:
+   ````sh
    php artisan key:generate
    ```
-6. Ejecutar migraciones
-   ```sh
+6. Execute migrations
+   ````sh
    php artisan migrate --path=database/migrations/2025_04_01_220000_create_currencies_table.php
    php artisan migrate --path=database/migrations/2025_04_01_225438_create_products_table.php
    php artisan migrate --path=database/migrations/2025_04_01_225459_create_product_prices_table.php
 
-   php artisan migrate (resto de tablas)
+   php artisan migrate (rest of tables)
 
    ```
-7. Generar documentación Swagger:
+7. Generate Swagger documentation:
 
-   ```sh
+   ````sh
    php artisan l5-swagger:generate
    ```
 
-8. Generar user seed:
-   ```sh
+8. Generate user seed:
+   ````sh
    php artisan db:seed --class=UserSeeder
    ```
 
-8. Iniciar el servidor de desarrollo:
-   ```sh
+8. Start the development server:
+   ````sh
    php artisan serve
    ```
 
-## 🛠 Tecnologías utilizadas
+## 🛠 Technologies used
 
 - Laravel 12
 - PHP ^8.2
 - MySQL 8 (Docker)
-- Laravel Sanctum (Autenticación)
+- Laravel Sanctum (Authentication)
 - Eloquent ORM
-- Swagger (Documentación API)
+- Swagger (API Documentation)
 - SOLID Principles
-
-## 🔐 Autenticación
-Esta API usa Laravel Sanctum para la autenticación. Para obtener un token:
-
-```sh
+## 🔐 Authentication.
+This API uses Laravel Sanctum for authentication. To get a token:
+````sh
 POST /api/login
 ```
 
-Con los siguientes datos:
+With the following data:
 ```json
 {
    "email": "testuser@example.com",
@@ -75,34 +73,32 @@ Con los siguientes datos:
 }
 ```
 
-El token recibido debe ser enviado en la cabecera `Authorization` en cada petición:
+The received token must be sent in the `Authorization` header in each request:
 ```sh
 Authorization: Bearer {TOKEN}
 ```
 
-## 📌 Endpoints Principales
+## 📌 Main Endpoints
 
-### Divisas
-- `POST /api/currencies` - Crear divisas
+### Currencies
+- `POST /api/currencies` - Create Currencies
 
-### Productos
-- `GET /api/products` - Listar productos
-- `POST /api/products` - Crear producto
-- `GET /api/products/{id}` - Obtener producto por ID
-- `PUT /api/products/{id}` - Actualizar producto
-- `DELETE /api/products/{id}` - Eliminar producto
+### Products
+- `GET /api/products` - List Products
+- `POST /api/products` - Create Product
+- `GET /api/products/{id}` - Get Product by Product ID
+- `PUT /api/products/{id}` - Update product
+- `DELETE /api/products/{id}` - Delete Product
 
-### Precios de Productos
-- `GET /api/products/{id}/prices` - Obtener precios por producto
-- `POST /api/products/{id}/prices` - Agregar precio a un producto
+### Product Pricing
+- `GET /api/products/{id}/prices` - Get prices per product
+- `POST /api/products/{id}/prices` - Add price to a product
 
-## 📝 Documentación Swagger
+## 📝 Swagger documentation
 
-La documentación generada con Swagger está disponible en:
+The documentation generated with Swagger is available at:
 ```
 http://localhost:8000/api/documentation
 ```
-
 ## 📄 Licencia
-Este proyecto está bajo la licencia de Javier Gil.
-
+This project is licensed to Javier Gil.
