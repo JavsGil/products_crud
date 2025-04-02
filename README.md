@@ -61,7 +61,7 @@ This project implements a RESTful API to manage products using Laravel 10, follo
 - SOLID Principles
 ## 🔐 Authentication.
 This API uses Laravel Sanctum for authentication. To get a token:
-````sh
+```sh
 POST /api/login
 ```
 
