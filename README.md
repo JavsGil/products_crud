@@ -6,10 +6,8 @@ Este proyecto implementa una API RESTful para gestionar productos utilizando Lar
 
 1. Clonar el repositorio:
    ```sh
-
-   git clone https://github.com/JavsGil/products_crud.git
+   git clone https://github.com/tu-repositorio/api-productos.git
    cd api-productos
-   
    ```
 2. Instalar dependencias:
    ```sh
@@ -47,19 +45,15 @@ Este proyecto implementa una API RESTful para gestionar productos utilizando Lar
    php artisan db:seed --class=UserSeeder
    ```
 
-9. Iniciar el servidor de desarrollo:
+8. Iniciar el servidor de desarrollo:
    ```sh
    php artisan serve
-   ```
-
-10. Ejecutar los test:
-   ```sh
-  php artisan test
    ```
 
 ## 🛠 Tecnologías utilizadas
 
 - Laravel 12
+- PHP ^8.2
 - MySQL 8 (Docker)
 - Laravel Sanctum (Autenticación)
 - Eloquent ORM
