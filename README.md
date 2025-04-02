@@ -10,23 +10,23 @@ This project implements a RESTful API to manage products using Laravel 10, follo
    cd api-products
    ```
 2. Install dependencies:
-   ````sh
+   ```sh
    composer install
    ```
 3. Set environment variables:
-   ````sh
+   ```sh
    cp .env.example .env
    ```
 4. Raise the database with Docker:
-   ````sh
+   ```sh
    docker-compose up -d
    ```
 5. Generate the application key:
-   ````sh
+   ```sh
    php artisan key:generate
    ```
 6. Execute migrations
-   ````sh
+   ```sh
    php artisan migrate --path=database/migrations/2025_04_01_220000_create_currencies_table.php
    php artisan migrate --path=database/migrations/2025_04_01_225438_create_products_table.php
    php artisan migrate --path=database/migrations/2025_04_01_225459_create_product_prices_table.php
@@ -36,19 +36,24 @@ This project implements a RESTful API to manage products using Laravel 10, follo
    ```
 7. Generate Swagger documentation:
 
-   ````sh
+   ```sh
    php artisan l5-swagger:generate
    ```
 
 8. Generate user seed:
-   ````sh
+   ```sh
    php artisan db:seed --class=UserSeeder
    ```
 
-8. Start the development server:
-   ````sh
+9. Start the development server:
+   ```sh
    php artisan serve
    ```
+
+ 10. Start the test case:
+   ```sh
+   php artisan test
+   ```  
 
 ## 🛠 Technologies used
 
