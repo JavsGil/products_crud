@@ -6,8 +6,10 @@ Este proyecto implementa una API RESTful para gestionar productos utilizando Lar
 
 1. Clonar el repositorio:
    ```sh
+
    git clone https://github.com/JavsGil/products_crud.git
    cd api-productos
+   
    ```
 2. Instalar dependencias:
    ```sh
