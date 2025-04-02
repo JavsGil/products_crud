@@ -6,7 +6,7 @@ Este proyecto implementa una API RESTful para gestionar productos utilizando Lar
 
 1. Clonar el repositorio:
    ```sh
-   git clone https://github.com/tu-repositorio/api-productos.git
+   git clone https://github.com/JavsGil/products_crud.git
    cd api-productos
    ```
 2. Instalar dependencias:
@@ -45,9 +45,14 @@ Este proyecto implementa una API RESTful para gestionar productos utilizando Lar
    php artisan db:seed --class=UserSeeder
    ```
 
-8. Iniciar el servidor de desarrollo:
+9. Iniciar el servidor de desarrollo:
    ```sh
    php artisan serve
+   ```
+
+10. Ejecutar los test:
+   ```sh
+  php artisan test
    ```
 
 ## 🛠 Tecnologías utilizadas
