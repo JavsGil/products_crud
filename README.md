@@ -6,7 +6,7 @@ This project implements a RESTful API to manage products using Laravel 10, follo
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/tu-repositorio/api-productos.git
+   git clone https://github.com/JavsGil/products_crud.git
    cd api-products
    ```
 2. Install dependencies:
